@@ -137,6 +137,7 @@ It relies on universal structural constraints (checklists, negative constraints,
 | [`.clinerules`](./.clinerules) | Universal adapter for Cline / Roo Code. |
 | [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) | Universal adapter for GitHub Copilot. |
 | [`GEMINI.md`](./GEMINI.md) | Universal adapter for Gemini Code Assist / Google Antigravity. |
+| [`docs/agent-decision-matrix.md`](./docs/agent-decision-matrix.md) | Autonomous decision rubric & 5-gate execution criteria for peak output. |
 | [`docs/surgical-editing-and-scope-containment.md`](./docs/surgical-editing-and-scope-containment.md) | Eliminating cascading regressions and unrequested drive-by edits. |
 | [`docs/drift-prevention-and-circuit-breakers.md`](./docs/drift-prevention-and-circuit-breakers.md) | Stopping agent tangents, context vomiting, and 3-strike loops. |
 | [`docs/token-economy-and-max-output.md`](./docs/token-economy-and-max-output.md) | Heavy braining with minimal token consumption; zero echo rules. |

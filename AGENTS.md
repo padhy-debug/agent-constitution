@@ -13,6 +13,7 @@ Before proposing or executing any actions, perform this initialization sequence:
 2. **`CONTEXT.md` (project root)**: Read current project state, architecture, stack choices, and the **Do-Not-Touch list**.
 3. **`TASKS.md` (project root)**: Read active tasks, current milestone goals, and completed history.
 4. **Relevant `docs/*.md`**: Consult specialized protocols matching your task:
+   - Autonomous Decision Matrix → [`docs/agent-decision-matrix.md`](./docs/agent-decision-matrix.md)
    - Surgical Scope & Containment → [`docs/surgical-editing-and-scope-containment.md`](./docs/surgical-editing-and-scope-containment.md)
    - Drift Prevention & Circuit Breakers → [`docs/drift-prevention-and-circuit-breakers.md`](./docs/drift-prevention-and-circuit-breakers.md)
    - Token Economics & Heavy Braining → [`docs/token-economy-and-max-output.md`](./docs/token-economy-and-max-output.md)

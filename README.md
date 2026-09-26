@@ -107,6 +107,14 @@ Run the validation suite to ensure your repository has zero drift and complete c
 .\scripts\validate-constitution.ps1
 ```
 
+### 🏷️ Add the Badge to Your Project
+
+Signal to contributors and visitors that your codebase is protected against agent hallucinations and regressions:
+
+```markdown
+[![Governed by Agent Constitution](https://img.shields.io/badge/Governed%20by-Agent%20Constitution-blue?style=flat-square&logo=shield)](https://github.com/padhy-debug/agent-constitution)
+```
+
 ---
 
 ## 🏛️ The Constitutional Pillars

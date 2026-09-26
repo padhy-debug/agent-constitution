@@ -3,6 +3,8 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://img.shields.io/npm/v/agent-constitution.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/agent-constitution)
+[![NPM Downloads](https://img.shields.io/npm/dm/agent-constitution.svg?style=flat-square)](https://www.npmjs.com/package/agent-constitution)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen.svg)](./.github/workflows/ci.yml)
 [![Universal Models](https://img.shields.io/badge/Models-Claude%20%7C%20GPT--4o%20%7C%20Gemini%20%7C%20DeepSeek%20%7C%20Qwen-blueviolet.svg)](#-universal-model--stack-agnostic)

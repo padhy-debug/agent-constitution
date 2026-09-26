@@ -54,6 +54,12 @@ src/
 
 ## 4. Performance & Styling
 
-- Optimize images using native framework components (`next/image`) with explicit width/height and responsive `sizes`.
-- Avoid layout shifts (CLS) by reserving space for dynamic content and loaders.
-- Avoid inline function allocations in high-frequency list renders.
+- **Anti-AI-Slop Aesthetics**:
+  - Strictly adhere to [`docs/frontend-design-and-aesthetics.md`](../frontend-design-and-aesthetics.md).
+  - Reject generic cookie-cutter 3-box card rows, cliché gradients, and placeholder copy.
+  - Enforce layered surface architecture, bespoke typography, and curated semantic HSL tokens.
+- **Image & Asset Optimization**:
+  - Optimize images using native framework components (`next/image`) with explicit width/height and responsive `sizes`.
+- **Layout Stability & Smoothness**:
+  - Avoid layout shifts (CLS) by reserving space for dynamic content and loaders.
+  - Avoid inline function allocations in high-frequency list renders.

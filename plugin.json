@@ -1,0 +1,23 @@
+{
+  "name": "agent-constitution",
+  "version": "1.0.0",
+  "description": "Master behavioral contract, runtime git guardrails, and persistent context memory for AI coding agents.",
+  "author": "Agent Constitution Contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/padhy-debug/agent-constitution",
+  "mcpServers": {
+    "agent-constitution": {
+      "command": "node",
+      "args": ["bin/mcp-server.js"]
+    }
+  },
+  "rules": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "commands": {
+    "validate": "node bin/cli.js validate",
+    "benchmark": "node bin/cli.js benchmark",
+    "hooks": "node bin/cli.js hooks"
+  }
+}

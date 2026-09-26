@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Agent Constitution - Pre-Push Runtime Guardrail
+# Deterministically blocks unauthorized agent pushes and protects primary branches.
+
+set -euo pipefail
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+
+echo "🛡️  [Constitutional Guardrail] Validating pre-push authorization on branch: $CURRENT_BRANCH..."
+
+# 1. Protected Branch Lockout
+if [ "$CURRENT_BRANCH" = "main" ] || [ "$CURRENT_BRANCH" = "master" ] || [ "$CURRENT_BRANCH" = "production" ]; then
+    if [ -z "${ALLOW_PROTECTED_PUSH:-}" ]; then
+        echo "❌ [BLOCKED] Direct remote push to protected branch '$CURRENT_BRANCH' is forbidden!"
+        echo "👉 You must push to an isolated feature branch (feat/*, fix/*) and create a Pull Request."
+        echo "💡 Admin override: ALLOW_PROTECTED_PUSH=1 git push (or git push --no-verify)"
+        exit 1
+    else
+        echo "⚠️  [ADMIN OVERRIDE] ALLOW_PROTECTED_PUSH detected. Proceeding with push to $CURRENT_BRANCH..."
+    fi
+fi
+
+# 2. Autonomous Agent Remote Push Lockout
+# If running inside an AI agent session without explicit developer override, halt immediately.
+if [ -z "${ALLOW_AGENT_PUSH:-}" ] && [ -z "${AGENT_PUSH_CONFIRMED:-}" ]; then
+    # In interactive developer shells, allow standard push; but provide safe guardrail warning
+    if [ "${AI_AGENT_ENV:-0}" = "1" ] || [ "${AGENT_MODE:-0}" = "1" ]; then
+        echo "❌ [BLOCKED] Autonomous agent remote push is locked by default!"
+        echo "👉 The human developer must explicitly approve remote push: ALLOW_AGENT_PUSH=1 git push"
+        exit 1
+    fi
+fi
+
+echo "✅ [Constitutional Guardrail] Pre-push verification passed."
+exit 0

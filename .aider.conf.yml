@@ -1,0 +1,16 @@
+# Aider Configuration — Agent Constitution Integration
+# See AGENTS.md for the supreme behavioral contract.
+
+# Always load the master behavioral contract and persistent project memory
+read:
+  - AGENTS.md
+  - CONTEXT.md
+  - TASKS.md
+
+# Auto-commit and git safety options
+auto-commits: true
+dirty-commits: false
+
+# Minimal viable diff enforcement
+stream: true
+verbose: false

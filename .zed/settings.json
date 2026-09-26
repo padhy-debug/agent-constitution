@@ -1,0 +1,10 @@
+{
+  "assistant": {
+    "version": "2",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet"
+    }
+  },
+  "agent_instructions": "Read AGENTS.md, CONTEXT.md, and TASKS.md first. Touch only the exact lines requested (Minimal Viable Diff). Never alter neighboring functions. Ensure zero regressions."
+}

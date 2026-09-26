@@ -1,0 +1,36 @@
+name: Agent Constitution Gate
+
+# Reusable GitHub Action Gate for Any Repository
+# Drop this into your repository at .github/workflows/agent-constitution-gate.yml
+# Fails PRs if an AI coding agent violates constitutional invariants.
+
+on:
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  constitution-gate:
+    name: Constitutional Verification & Diff Guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate Constitutional Compliance
+        run: |
+          npx --yes agent-constitution validate .
+
+      - name: Run Autonomous Diff Guard
+        run: |
+          npx --yes agent-constitution diff-guard .
+
+      - name: Run 100% Empirical Benchmark
+        run: |
+          npx --yes agent-constitution benchmark .

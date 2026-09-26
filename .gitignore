@@ -16,3 +16,5 @@ desktop.ini
 scratch/
 scratch_test/
 *.tmp
+node_modules/
+*.tar.gz

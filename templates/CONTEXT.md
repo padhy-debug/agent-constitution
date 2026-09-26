@@ -14,6 +14,16 @@
 
 - High-level structure: (link to `docs/architecture-standards.md`; note any deviation from the default and why)
 
+## System Scale & Evolutionary Horizon
+
+*(Think beyond short-term sessions: How does the system scale as load increases 10x-100x?)*
+
+- **Current Load / Scope**:
+- **Target Scale Horizon (10x-100x)**: (throughput, concurrent users, data volume)
+- **Data Tier Evolution**: (relational DB -> read replicas -> caching/Redis -> sharding/event streams)
+- **Modular Seams**: (boundaries where monolith features can be cleanly extracted into standalone services or queues)
+- **Long-Term Invariants**: (backward compatibility guarantees, latency limits, compliance boundaries)
+
 ## Key Decisions Log
 
 *(Newest first. Never delete old entries — append.)*

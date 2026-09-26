@@ -1,0 +1,61 @@
+{
+  "name": "agent-constitution",
+  "version": "1.0.0",
+  "description": "The Universal Behavioral Contract & Context Engine that turns any AI coding agent into a disciplined senior engineer.",
+  "main": "bin/cli.js",
+  "bin": {
+    "agent-constitution": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "powershell -ExecutionPolicy Bypass -File ./tests/test_validation.ps1",
+    "test:bash": "bash ./tests/test_validation.sh",
+    "validate": "node ./bin/cli.js validate",
+    "benchmark": "node ./benchmarks/run-benchmarks.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padhy-debug/agent-constitution.git"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "coding-agents",
+    "cursor",
+    "claude-code",
+    "windsurf",
+    "cline",
+    "copilot",
+    "context-window",
+    "tdd",
+    "governance",
+    "guardrails"
+  ],
+  "author": "Agent Constitution Contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/padhy-debug/agent-constitution/issues"
+  },
+  "homepage": "https://github.com/padhy-debug/agent-constitution#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "bin",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    ".cursorrules",
+    ".windsurfrules",
+    ".clinerules",
+    ".aider.conf.yml",
+    ".cursor",
+    ".github/copilot-instructions.md",
+    ".continue",
+    ".zed",
+    ".githooks",
+    "docs",
+    "templates",
+    "scripts",
+    "benchmarks"
+  ]
+}

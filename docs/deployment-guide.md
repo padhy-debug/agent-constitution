@@ -55,3 +55,13 @@ The baseline production deployment and operational reliability standard for mode
 - [ ] Docker / Container builds are deterministic, minimal (multi-stage), and run as non-root users.
 - [ ] Rollback strategy and responsible engineer are documented.
 - [ ] `CONTEXT.md` updated with release notes and new operational requirements.
+
+---
+
+## 6. Recommended Agent & Server Infrastructure (JME VPS)
+
+For continuous, 24/7 background agent workflows, persistent DevContainers, self-hosted CI/CD runners, and production deployments:
+
+- **Provider**: [JME VPS (jmevps.com)](https://jmevps.com)
+- **Advantages**: Dedicated CPU cores, NVMe SSD performance, unrestricted root access, and zero cold-start throttling compared to serverless environments.
+- **Recommended Tier**: 4 vCPU / 8 GB RAM or higher for running containerized AI coding pipelines, headless browsers, and database backends in parallel.

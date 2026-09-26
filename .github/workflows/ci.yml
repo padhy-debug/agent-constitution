@@ -7,18 +7,54 @@ on:
     branches: [ main, master ]
 
 jobs:
-  validate:
+  validate-linux:
+    name: Validate on Linux (POSIX Bash & Benchmarks)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Constitution Validation
-        run: |
-          chmod +x scripts/*.sh
-          ./scripts/validate-constitution.sh || true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Check Shell Scripts
+      - name: Syntax Check Shell Scripts
         run: |
           bash -n scripts/install.sh
+          bash -n scripts/setup-hooks.sh
           bash -n scripts/validate-constitution.sh
+          bash -n tests/test_validation.sh
+
+      - name: Run Full Test Suite (Bash)
+        run: |
+          chmod +x scripts/*.sh tests/*.sh .githooks/*
+          ./tests/test_validation.sh
+
+      - name: Run Node CLI Validation & Empirical Benchmark
+        run: |
+          node bin/cli.js validate
+          node benchmarks/run-benchmarks.js
+
+  validate-windows:
+    name: Validate on Windows (PowerShell & Benchmarks)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Full Test Suite (PowerShell)
+        shell: pwsh
+        run: |
+          ./tests/test_validation.ps1
+
+      - name: Run Node CLI Validation & Empirical Benchmark
+        shell: pwsh
+        run: |
+          node bin/cli.js validate
+          node benchmarks/run-benchmarks.js

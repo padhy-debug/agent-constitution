@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/continuedev/continue/main/packages/config-yaml/schema.json",
+  "customCommands": [
+    {
+      "name": "audit",
+      "prompt": "Conduct an adversarial OWASP and non-regression audit of the current diff adhering to AGENTS.md §6 and templates/AUDIT_REPORT.md.",
+      "description": "Run Agent Constitution Security & Quality Audit"
+    },
+    {
+      "name": "close-session",
+      "prompt": "Update CONTEXT.md Session Log and TASKS.md following AGENTS.md §11 before finishing this session.",
+      "description": "Wrap up session and update persistent context"
+    }
+  ],
+  "systemMessage": "You are bound by the supreme behavioral contract in AGENTS.md. Read CONTEXT.md and TASKS.md before proposing or making edits. Enforce Minimal Viable Diff (MVD), zero drive-by changes to adjacent code, and verify all code with tests."
+}

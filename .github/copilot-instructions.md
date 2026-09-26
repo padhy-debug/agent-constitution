@@ -2,8 +2,9 @@
 
 When generating code or proposing pull requests for this repository:
 
-1. **Master Constitution**: Abide strictly by the rules in `AGENTS.md`.
+1. **Surgical Scope**: Touch ONLY the exact lines needed for the requested task. Do NOT refactor or reformat adjacent code or files.
 2. **Context Memory**: Consult `CONTEXT.md` for project architecture decisions and `TASKS.md` for active items.
-3. **No Regressions**: Verify the blast radius before altering exported functions or schema models.
-4. **Security & Validation**: Apply defensive programming and validate all external inputs against schemas.
-5. **No Placeholders**: Never output `# TODO` or stub code in proposed solutions.
+3. **Heavy Braining, Min Tokens**: Deliver concise, dense solutions. Do not echo full unchanged files.
+4. **Universal Stack**: Follow the project's native idioms and linters discovered in manifest files.
+5. **Zero Regressions**: Verify the blast radius before altering exported functions or schema models.
+6. **No Placeholders**: Never output `# TODO` or stub code in proposed solutions.

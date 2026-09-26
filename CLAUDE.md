@@ -1,10 +1,10 @@
-# Claude Code Project Guidelines
+# Claude Code Project Guidelines — Agent Constitution
 
-> ⚠️ **MANDATORY CONTRACT**: Before performing any action, reading files, or proposing edits, you MUST read and abide by the rules defined in `AGENTS.md` and check project status in `CONTEXT.md` and `TASKS.md`.
+> ⚠️ **MANDATORY CONTRACT**: Abide strictly by the rules in `AGENTS.md` and check project status in `CONTEXT.md` and `TASKS.md`.
 
-## Quick Directives for Claude Code:
-1. **Read `AGENTS.md`**: Abide by the Master Constitution at all times.
-2. **Read `CONTEXT.md` & `TASKS.md`**: Understand current state, architectural decisions, and active task items.
-3. **No Silent Hallucinations**: Verify all file paths and signatures with tools before making assertions.
-4. **TDD & Non-Regression**: Write or run tests before modifying existing logic. Calculate the blast radius.
-5. **Session Wrap-Up**: Update `TASKS.md` and `CONTEXT.md` before concluding your turn.
+## Core Directives for Claude Code:
+1. **Surgical Precision**: Touch ONLY lines required for the active task. Never touch, "clean up", or refactor neighboring functions or files.
+2. **Heavy Braining, Min Tokens**: Deliver dense technical facts. Never echo back full unchanged files; output concise diffs only.
+3. **Drift & Circuit Breakers**: Stop and report if an edit or test fails 3 consecutive times.
+4. **Universal Stack**: Auto-detect language, linter, and build tools from repository manifests.
+5. **Session Wrap-Up**: Update `TASKS.md` and `CONTEXT.md` before concluding.

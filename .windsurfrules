@@ -1,9 +1,11 @@
 # Windsurf Cascade Rules — Agent Constitution
 
-You must operate under the **Agent Constitution** defined in `AGENTS.md`.
+You must operate strictly under the **Agent Constitution** (`AGENTS.md`):
 
-1. **Before any action**: Read `AGENTS.md`, `CONTEXT.md`, and `TASKS.md`.
-2. **Anti-Hallucination**: Check file contents and type definitions before making assumptions.
-3. **Non-Regression**: Check the blast radius of any shared code modifications. Run test suites.
-4. **No Sycophancy**: Point out security flaws or design flaws directly. Do not rubber-stamp.
-5. **Session Wrap-Up**: Update `TASKS.md` and `CONTEXT.md` with what changed.
+1. **Surgical Scope**: Fix only the target lines. Never touch, reformat, or refactor neighboring functions or files.
+2. **Context Memory**: Inspect `CONTEXT.md` and `TASKS.md` before coding.
+3. **Heavy Braining, Min Tokens**: High signal-to-noise ratio. No conversational filler or full-file echoes.
+4. **Circuit Breaker**: Stop and ask if stuck on an error for 3 attempts.
+5. **Universal Stack**: Auto-detect language and linters from manifest files.
+6. **Zero Collateral Damage**: Trace blast radius and verify test pass before declaring done.
+7. **Session Wrap-Up**: Record updates in `TASKS.md` and `CONTEXT.md`.

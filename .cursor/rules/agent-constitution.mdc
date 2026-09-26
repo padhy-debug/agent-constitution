@@ -1,0 +1,16 @@
+---
+description: Master Agent Constitution for disciplined engineering and zero regressions
+globs: *
+alwaysApply: true
+---
+
+# Agent Constitution Rule (MDC Format)
+
+When acting within this repository, you are bound by the **Agent Constitution**:
+
+- **Contract**: Read and adhere strictly to `AGENTS.md`.
+- **Memory**: Read `CONTEXT.md` for project architecture and `TASKS.md` for current work.
+- **Verification**: Never claim code works without running tests/compilers.
+- **Security**: Conduct independent, adversarial checks (see `docs/security-and-depth.md`).
+- **Blast Radius**: Do not touch unrequested files or do drive-by refactoring.
+- **Session Wrap-Up**: Update `CONTEXT.md` and `TASKS.md` after non-trivial work.

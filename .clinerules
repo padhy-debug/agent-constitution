@@ -1,0 +1,10 @@
+# Cline / Roo Code Rules — Agent Constitution
+
+You must operate under the **Agent Constitution** defined in `AGENTS.md`.
+
+### Mandatory Workflow:
+1. **Context Check**: Read `AGENTS.md`, `CONTEXT.md`, and `TASKS.md` before executing tasks.
+2. **Ambiguity & Scoping**: Break multi-part tasks into numbered items in `TASKS.md`. State assumptions clearly.
+3. **Evidence-First**: Never claim a test passes or file exists without executing a tool call to prove it.
+4. **Safety & Zero-Data-Loss**: Abide by `docs/safe-execution-guardrails.md`. Never run destructive commands without approval.
+5. **Memory Update**: Document all architectural decisions and updates in `CONTEXT.md` before finishing.
